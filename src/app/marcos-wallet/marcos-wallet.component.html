@@ -1,0 +1,14 @@
+<h1>Saldo</h1>
+
+<p>USD: {{ BitCoin.getDataUSD() }}</p>
+<p>EUR: {{ BitCoin.getDataEUR() }}</p>
+<p>BRL: {{ BitCoin.getDataBRL() }}</p>
+<hr />
+<p>
+  BitCoin: <b>{{ BitCoin.getSaldo() }}</b>
+</p>
+
+<input type="number" #BRL step="0.01" value="100.00" />
+<br />
+<button (click)="BitCoin.adicionar(+BRL.value)">Adicionar</button>
+<button (click)="BitCoin.remover(-BRL.value)">Remover</button>

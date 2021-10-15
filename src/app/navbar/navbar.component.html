@@ -1,0 +1,16 @@
+<ul>
+  <li><a [routerLink]="['/']">Home</a></li>
+  <li><a [routerLink]="['/marcos-currency']">Marcos Currency</a></li>
+  <li><a [routerLink]="['/marcos-wallet']">marcos Wallet</a></li>
+  <span><b>BRL</b></span>
+  <span *ngIf="BitCoin.diffBRL < 0" style="color:red"><b>⬇</b></span>
+  <span *ngIf="BitCoin.diffBRL > 0" style="color:green"><b>⬆</b></span>
+  |
+  <span><b>USD</b></span>
+  <span *ngIf="BitCoin.diffUSD < 0" style="color:red"><b>⬇</b></span>
+  <span *ngIf="BitCoin.diffUSD > 0" style="color:green"><b>⬆</b></span>
+  |
+  <span><b>EUR</b></span>
+  <span *ngIf="BitCoin.diffEUR < 0" style="color:red"><b>⬇</b></span>
+  <span *ngIf="BitCoin.diffEUR > 0" style="color:green"><b>⬆</b></span>
+</ul>
